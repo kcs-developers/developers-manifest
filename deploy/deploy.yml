@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: spring
-          image: langoustine/spring-test:latest
+          image: startdreamteam/spring-test:latest
