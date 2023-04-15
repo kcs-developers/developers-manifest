@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: developers-live
-          image: startdreamteam/developers-live-test:latest
+          image: startdreamteam/developers-live-test
           ports:
             - containerPort: 9002
