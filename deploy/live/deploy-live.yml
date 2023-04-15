@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: developers-live-svc
+spec:
+  selector:
+    app: developers-live
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 9002
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: developers-live-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: developers-live
+  template:
+    metadata:
+      labels:
+        app: developers-live
+    spec:
+      containers:
+        - name: developers-live
+          image: startdreamteam/developers-live-test:latest
