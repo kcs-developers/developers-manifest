@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: developers-member
-          image: startdreamteam/developers-member-test:45
+          image: startdreamteam/developers-member-test:46
