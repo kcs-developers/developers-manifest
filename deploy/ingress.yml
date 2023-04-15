@@ -10,10 +10,17 @@ spec:
     - host: diveloper.site
       http:
         paths:
-          - path: /member
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: developers-member-svc
+                port:
+                  number: 80
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: developers-member-live
                 port:
                   number: 80
