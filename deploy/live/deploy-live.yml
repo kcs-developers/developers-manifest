@@ -28,4 +28,4 @@ spec:
     spec:
       containers:
         - name: developers-live
-          image: startdreamteam/developers-live-test:28
+          image: startdreamteam/developers-live-test:29
