@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: developers-solve-svc
+spec:
+  selector:
+    app: developers-solve
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 9001
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: developers-solve-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: developers-solve
+  template:
+    metadata:
+      labels:
+        app: developers-solve
+    spec:
+      containers:
+        - name: developers-solve
+          image: startdreamteam/developers-solve-test:latest
