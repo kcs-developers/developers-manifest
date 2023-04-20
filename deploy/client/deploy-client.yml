@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: developers-client-svc
+spec:
+  selector:
+    app: developers-client
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: developers-client-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: developers-client
+  template:
+    metadata:
+      labels:
+        app: developers-client
+    spec:
+      containers:
+        - name: developers-client
+          image: startdreamteam/developers-client:latest
