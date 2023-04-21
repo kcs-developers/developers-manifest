@@ -28,4 +28,4 @@ spec:
     spec:
       containers:
         - name: developers-solve
-          image: startdreamteam/developers-solve-test:9
+          image: startdreamteam/developers-solve-test:10
