@@ -28,4 +28,4 @@ spec:
     spec:
       containers:
         - name: developers-notify
-          image: startdreamteam/developers-notify-test:14
+          image: startdreamteam/developers-notify-test:15
