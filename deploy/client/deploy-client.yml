@@ -28,4 +28,4 @@ spec:
     spec:
       containers:
         - name: developers-client
-          image: startdreamteam/developers-client:45
+          image: startdreamteam/developers-client:46
