@@ -29,3 +29,6 @@ spec:
       containers:
         - name: developers-solve
           image: startdreamteam/developers-solve-test:17
+          env:
+            - name: TZ
+              value: Asia/Seoul
