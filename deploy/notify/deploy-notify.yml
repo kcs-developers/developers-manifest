@@ -29,3 +29,6 @@ spec:
       containers:
         - name: developers-notify
           image: startdreamteam/developers-notify-test:33
+          env:
+            - name: TZ
+              value: Asia/Seoul
