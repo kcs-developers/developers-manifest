@@ -29,3 +29,6 @@ spec:
       containers:
         - name: developers-client
           image: startdreamteam/developers-client:112
+          env:
+            - name: TZ
+              value: Asia/Seoul
