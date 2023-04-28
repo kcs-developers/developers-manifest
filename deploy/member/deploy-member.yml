@@ -28,7 +28,7 @@ spec:
     spec:
       containers:
         - name: developers-member
-          image: startdreamteam/developers-member-test:73
+          image: startdreamteam/developers-member-test:75
           env:
             - name: TZ
               value: Asia/Seoul
